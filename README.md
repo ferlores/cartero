@@ -205,8 +205,8 @@ Called when all assets and meta data has been written to the destination directo
 #### c.on( 'error', function( err ){} );
 Called when an error occurs.
 
-#### p.on( 'browerifyInstanceCreated', function( browserifyInstance ) );
-Called when a browserify / watchify instance is created.
+#### p.on( 'browerifyInstanceCreated', function( browserifyInstance , parcelName ) );
+Called when a browserify / watchify instance is created, ```parcelName``` is the name of the folder/parcel that is being process at that time
 
 #### c.on( 'fileWritten', function( path, assetType, isBundle, watchModeUpdate ){} );
 Called when an asset or bundle has been written to disk. `watchModeUpdate` is true iff the write is a result of a change in watch mode.
